@@ -2,39 +2,50 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy 17th Birthday Alyssa!</title>
+<title>Elyse's Cosmic 17th Birthday</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial;
 color:white;
-background:linear-gradient(#050515,#1a1a3d);
 text-align:center;
+background:black;
 overflow-x:hidden;
 }
 
-/* star background */
-.stars{
+/* starfield */
+
+.star{
 position:fixed;
-width:100%;
-height:100%;
-background:url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3");
-background-size:cover;
-opacity:.35;
-z-index:-1;
+width:2px;
+height:2px;
+background:white;
+opacity:.8;
 }
 
+/* shooting stars */
+
+.shooting{
+position:fixed;
+width:3px;
+height:3px;
+background:white;
+box-shadow:0 0 6px white;
+}
+
+/* title */
+
 h1{
-font-size:60px;
+font-size:55px;
 margin-top:40px;
 animation:glow 2s infinite alternate;
 }
 
 @keyframes glow{
-from{ text-shadow:0 0 10px #fff;}
-to{ text-shadow:0 0 30px #8ab4ff;}
+from{ text-shadow:0 0 10px white;}
+to{ text-shadow:0 0 35px #7aa8ff;}
 }
 
 section{
@@ -42,43 +53,100 @@ padding:40px;
 }
 
 .card{
-background:rgba(255,255,255,0.1);
-padding:20px;
-margin:20px auto;
+background:rgba(255,255,255,0.08);
+padding:25px;
 border-radius:15px;
-width:80%;
-max-width:800px;
+max-width:900px;
+margin:auto;
 }
 
-.gallery img{
-width:200px;
-border-radius:12px;
+/* solar system */
+
+.orbit{
+border:1px dashed rgba(255,255,255,.3);
+border-radius:50%;
+position:absolute;
+top:50%;
+left:50%;
+}
+
+.planet{
+width:18px;
+height:18px;
+background:#ff7be5;
+border-radius:50%;
+position:absolute;
+top:-9px;
+left:50%;
+}
+
+.rotate{
+animation:spin 25s linear infinite;
+}
+
+@keyframes spin{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+
+/* dna */
+
+#dna{
+font-size:30px;
+animation:spin 6s linear infinite;
+}
+
+/* books */
+
+.book{
+font-size:40px;
+cursor:pointer;
 margin:10px;
 }
 
-button{
-padding:12px 20px;
-border:none;
+/* cat game */
+
+.cat{
+font-size:50px;
+cursor:pointer;
+position:absolute;
+}
+
+/* microscope */
+
+#slides img{
+width:200px;
 border-radius:10px;
-background:#ff7be5;
-color:white;
-font-size:16px;
+margin:10px;
 cursor:pointer;
 }
 
-#balloonGame{
-margin-top:30px;
+#viewer img{
+width:350px;
+border-radius:12px;
 }
+
+/* cake */
+
+.candle{
+font-size:35px;
+cursor:pointer;
+}
+
+/* balloons */
 
 .balloon{
 font-size:40px;
 cursor:pointer;
 }
 
-#win{
-font-size:40px;
-display:none;
-color:#ffd700;
+button{
+padding:10px 18px;
+border:none;
+border-radius:8px;
+background:#ff7be5;
+color:white;
+cursor:pointer;
 }
 
 </style>
@@ -86,144 +154,301 @@ color:#ffd700;
 
 <body>
 
-<div class="stars"></div>
-
 <audio autoplay loop>
 <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8c8a73467.mp3">
 </audio>
 
-<h1>🎉 Happy 17th Birthday Alyssa! 🎉</h1>
+<h1>🎉 Happy 17th Birthday Elyse 🎉</h1>
+<p>A universe celebrating astronomy, books, cats, anatomy & histology</p>
+
+<!-- SOLAR SYSTEM -->
+
+<div class="orbit rotate" style="width:350px;height:350px;margin-left:-175px;margin-top:-175px;">
+<div class="planet"></div>
+</div>
+
+<!-- ASTRONOMY -->
 
 <section>
 <div class="card">
-<h2>🌌 Astronomy</h2>
-<p>
-Just like the stars and galaxies, your future is huge and full of wonder.
-At 17, you're orbiting amazing possibilities and discoveries.
-</p>
-<p>✨ Keep exploring the universe!</p>
-</div>
-</section>
 
-<section>
-<div class="card">
-<h2>📚 Reading Corner</h2>
-<p>"A reader lives a thousand lives before he dies."</p>
-<p>"Books are portals to galaxies of imagination."</p>
-<p>May your shelves always be full and your stories endless.</p>
-</div>
-</section>
-
-<section>
-<div class="card">
-<h2>🐱 Cat Appreciation Zone</h2>
-
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131">
-<img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803">
-<img src="https://images.unsplash.com/photo-1494256997604-768d1f608cac">
-</div>
-
-<p>Because every birthday should include cats.</p>
-
-</div>
-</section>
-
-<section>
-<div class="card">
-<h2>🧬 Anatomy & Histology</h2>
+<h2>🌌 Elyse's Cosmic Observatory</h2>
 
 <p>
-The human body is the most incredible system ever built — trillions of
-cells working together.
+The universe contains billions of galaxies and endless mysteries.
+Just like the cosmos, Elyse's future is full of incredible discoveries.
 </p>
-
-<p>
-Whether you're exploring neurons, muscles, or microscopic tissues,
-your curiosity makes science exciting.
-</p>
-
-<p>🔬 Here's to many discoveries ahead!</p>
 
 </div>
 </section>
 
+<!-- DNA -->
+
 <section>
 <div class="card">
 
-<h2>🎈 Birthday Balloon Game</h2>
-<p>Pop 10 balloons!</p>
+<h2>🧬 DNA Discovery Lab</h2>
 
-<div id="balloonGame"></div>
+<div id="dna">🧬</div>
 
-<h2 id="score">Score: 0</h2>
+<p>
+Science, anatomy, and histology reveal the incredible complexity
+of life at the microscopic level.
+</p>
 
-<div id="win">
-🎉 YOU WIN! 🎉<br>
-Happy 17th Birthday Alyssa!
 </div>
+</section>
+
+<!-- BOOKS -->
+
+<section>
+<div class="card">
+
+<h2>📚 Elyse's Library</h2>
+
+<p>Click a book to get a recommendation.</p>
+
+<span class="book" onclick="book('science')">📘</span>
+<span class="book" onclick="book('fantasy')">📙</span>
+<span class="book" onclick="book('mystery')">📕</span>
+
+<p id="bookResult"></p>
+
+</div>
+</section>
+
+<!-- CAT GAME -->
+
+<section>
+<div class="card">
+
+<h2>🐱 Cat Chase Game</h2>
+<p>Catch the cat!</p>
+
+<div id="catGame" style="height:250px;position:relative;"></div>
+
+<p>Score: <span id="catScore">0</span></p>
+
+</div>
+</section>
+
+<!-- HISTOLOGY -->
+
+<section>
+<div class="card">
+
+<h2>🔬 Histology Microscope</h2>
+
+<div id="slides">
+
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
+onclick="zoom(this)">
+
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67"
+onclick="zoom(this)">
+
+<img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0"
+onclick="zoom(this)">
+
+</div>
+
+<div id="viewer"></div>
+
+</div>
+</section>
+
+<!-- CAKE -->
+
+<section>
+<div class="card">
+
+<h2>🎂 Elyse's Birthday Cake</h2>
+
+<span class="candle" onclick="blow(this)">🕯️</span>
+<span class="candle" onclick="blow(this)">🕯️</span>
+<span class="candle" onclick="blow(this)">🕯️</span>
+<span class="candle" onclick="blow(this)">🕯️</span>
+
+<p id="wish"></p>
+
+</div>
+</section>
+
+<!-- BALLOONS -->
+
+<section>
+<div class="card">
+
+<h2>🎈 Balloon Pop Game</h2>
+
+<div id="balloons"></div>
+
+<p>Score: <span id="score">0</span></p>
+
+<h2 id="win" style="display:none;">🎉 Happy Birthday Elyse! 🎉</h2>
 
 </div>
 </section>
 
 <script>
 
-let score = 0;
+/* starfield */
 
-function createBalloon(){
+for(let i=0;i<250;i++){
+let s=document.createElement("div");
+s.className="star";
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+document.body.appendChild(s);
+}
 
-let balloon = document.createElement("div");
-balloon.className="balloon";
-balloon.innerHTML="🎈";
+/* shooting stars */
 
-balloon.onclick=function(){
+setInterval(()=>{
+let s=document.createElement("div");
+s.className="shooting";
+s.style.left=Math.random()*100+"vw";
+s.style.top="0px";
+document.body.appendChild(s);
+
+let fall=setInterval(()=>{
+
+s.style.top=(s.offsetTop+8)+"px";
+s.style.left=(s.offsetLeft+4)+"px";
+
+if(s.offsetTop>window.innerHeight){
+s.remove();
+clearInterval(fall);
+}
+
+},20);
+
+},4000);
+
+/* books */
+
+function book(type){
+
+let text="";
+
+if(type=="science")
+text="Elyse should explore a science book about the universe or anatomy!";
+
+if(type=="fantasy")
+text="A magical fantasy adventure awaits Elyse.";
+
+if(type=="mystery")
+text="A mystery novel would keep Elyse guessing!";
+
+document.getElementById("bookResult").innerText=text;
+
+}
+
+/* cat game */
+
+let catScore=0;
+let cat=document.createElement("div");
+cat.className="cat";
+cat.innerHTML="🐱";
+
+function moveCat(){
+
+cat.style.left=Math.random()*80+"%";
+cat.style.top=Math.random()*180+"px";
+
+}
+
+cat.onclick=function(){
+
+catScore++;
+document.getElementById("catScore").innerText=catScore;
+moveCat();
+
+}
+
+document.getElementById("catGame").appendChild(cat);
+moveCat();
+
+/* microscope zoom */
+
+function zoom(img){
+
+document.getElementById("viewer").innerHTML=
+"<img src='"+img.src+"'>";
+
+}
+
+/* cake */
+
+let candles=0;
+
+function blow(c){
+
+c.innerHTML="💨";
+candles++;
+
+if(candles==4)
+document.getElementById("wish").innerText=
+"✨ Elyse made a birthday wish!";
+
+}
+
+/* balloons */
+
+let score=0;
+
+function spawn(){
+
+let b=document.createElement("span");
+b.className="balloon";
+b.innerHTML="🎈";
+
+b.onclick=function(){
 
 score++;
-document.getElementById("score").innerText="Score: "+score;
-
-balloon.remove();
+document.getElementById("score").innerText=score;
+b.remove();
 
 if(score>=10){
+
 document.getElementById("win").style.display="block";
 confetti();
+
 }else{
 spawn();
 }
 
 }
 
-document.getElementById("balloonGame").appendChild(balloon);
-}
+document.getElementById("balloons").appendChild(b);
 
-function spawn(){
-createBalloon();
 }
 
 spawn();
 
-/* simple confetti */
+/* confetti */
 
 function confetti(){
 
-for(let i=0;i<100;i++){
+for(let i=0;i<120;i++){
 
-let conf=document.createElement("div");
+let c=document.createElement("div");
 
-conf.style.position="fixed";
-conf.style.width="6px";
-conf.style.height="6px";
-conf.style.background="hsl("+Math.random()*360+"deg,100%,50%)";
-conf.style.left=Math.random()*100+"vw";
-conf.style.top="-10px";
+c.style.position="fixed";
+c.style.width="6px";
+c.style.height="6px";
+c.style.background="hsl("+Math.random()*360+"deg,100%,50%)";
+c.style.left=Math.random()*100+"vw";
+c.style.top="-10px";
 
-document.body.appendChild(conf);
+document.body.appendChild(c);
 
 let fall=setInterval(()=>{
 
-conf.style.top=(conf.offsetTop+5)+"px";
+c.style.top=(c.offsetTop+5)+"px";
 
-if(conf.offsetTop>window.innerHeight){
-conf.remove();
+if(c.offsetTop>window.innerHeight){
+c.remove();
 clearInterval(fall);
 }
 
@@ -236,4 +461,4 @@ clearInterval(fall);
 </script>
 
 </body>
-</html>
+</http
